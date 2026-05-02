@@ -90,8 +90,8 @@ class TestPack12IQto32(AmaranthSim):
                 r = re[j]
                 i = im[j]
                 mask = 2**12 - 1
-                self.assertEqual(r & mask, (b[0] << 4) | (b[1] >> 4))
-                self.assertEqual(i & mask, (b[1] & 0xf) << 8 | b[2])
+                self.assertEqual(r & mask, (int(b[0]) << 4) | (int(b[1]) >> 4))
+                self.assertEqual(i & mask, (int(b[1]) & 0xf) << 8 | int(b[2]))
 
         self.simulate([set_input, check_output])
 
