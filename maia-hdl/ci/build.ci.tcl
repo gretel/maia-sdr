@@ -47,9 +47,9 @@ if {[catch {source system_project.tcl} err]} {
 }
 cd ..
 
-# ---- Phase 2: write .bin for UHD ----
+# ---- Phase 2: write .bin ----
 # adi_project_run already wrote .bit to project dir. Re-open impl
-# and write .bin (raw, no header) for uhd_image_loader.
+# and write .bin (raw, no header) for bitstream deployment.
 
 set project_name $::env(PROJECT_NAME)
 
