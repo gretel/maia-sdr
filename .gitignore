@@ -4,3 +4,8 @@
 *.tar
 .pi/
 tmp/
+build.log
+*.rpt
+*.bit
+*.bin
+
